@@ -69,8 +69,8 @@ def threshold(pixel):
 def main():
 	interval = 15
 	threshold = 50
-	originX = 66  # Corner of curb, stall 1 lower left
-	originY = 325
+	originX = 22  # Corner of curb, stall 1 lower left
+	originY = 286
 	empty_asphalt = (originX + 125, originY - 235, originX + 125 + 430, originY - 235 + 100)
 	stalls = (
 		(31, -101, 12, 81),
@@ -84,6 +84,8 @@ def main():
 		(474, -119, 35, 90),
 		(530, -122, 27, 90)
 		)
+	start_time = time.monotonic()
+#	time.sleep(interval - ((time.monotonic() - start_time) % interval))
 #	capture_frame('http://leh-ev-charging:8554/evwest/', 'evwest_new.jpg')
 #	capture_frame('http://leh-ev-charging:8554/eveast/', 'eveast_new.jpg')
 #	time.sleep(5)
